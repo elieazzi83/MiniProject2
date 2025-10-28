@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.miniproject2.controller.HomeController"
+            prefWidth="820.0" prefHeight="520.0">
+
+    <!-- Top bar -->
+    <top>
+        <ToolBar styleClass="appbar">
+            <Label text="Mini Project 2" styleClass="app-title"/>
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Label fx:id="welcomeLabel" styleClass="muted"/>
+            <Button text="Logout" onAction="#onLogout" styleClass="ghost-btn"/>
+        </ToolBar>
+    </top>
+
+    <!-- Center card -->
+    <center>
+        <StackPane>
+            <VBox alignment="CENTER" spacing="24">
+                <Label text="Home" styleClass="h1"/>
+                <Label text="Manage Entities" styleClass="muted"/>
+
+                <!-- Card -->
+                <VBox styleClass="card" spacing="18" alignment="CENTER" maxWidth="520">
+                    <!-- Buttons grid -->
+                    <FlowPane fx:id="buttonsPane" hgap="14" vgap="14" alignment="CENTER">
+                        <!-- Predefined buttons (you can delete these if you prefer to add by code only) -->
+                        <Button fx:id="btnClients"  text="👤 Clients"  onAction="#openClients"  minWidth="150" minHeight="48" styleClass="pill-btn"/>
+                        <Button fx:id="btnProducts" text="📦 Products" onAction="#openProducts" minWidth="150" minHeight="48" styleClass="pill-btn"/>
+                        <Button fx:id="btnOrders"   text="🧾 Orders"   onAction="#openOrders"   minWidth="150" minHeight="48" styleClass="pill-btn"/>
+                    </FlowPane>
+
+                    <!-- small counters row -->
+                    <HBox alignment="CENTER" spacing="18">
+                        <Label fx:id="countClients"  text="Clients: 0"  styleClass="counter"/>
+                        <Label fx:id="countProducts" text="Products: 0" styleClass="counter"/>
+                        <Label fx:id="countOrders"   text="Orders: 0"   styleClass="counter"/>
+                    </HBox>
+                </VBox>
+            </VBox>
+        </StackPane>
+    </center>
+</BorderPane>

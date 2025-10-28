@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.miniproject2.controller.LoginController" prefWidth="420.0" prefHeight="300.0">
+  <children>
+    <VBox spacing="10.0" AnchorPane.topAnchor="40.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+      <Label text="Login" styleClass="title"/>
+      <TextField fx:id="usernameField" promptText="Username"/>
+      <PasswordField fx:id="passwordField" promptText="Password"/>
+      <Button text="Login" onAction="#onLogin"/>
+      <Label fx:id="errorLabel" styleClass="error"/>
+    </VBox>
+  </children>
+</AnchorPane>
